@@ -1,0 +1,65 @@
+name: api-ci
+
+on:
+  pull_request:
+    paths:
+      - "wd-api/**"
+      - ".github/workflows/api-ci.yml"
+  push:
+    branches: [ "main" ]
+    paths:
+      - "wd-api/**"
+      - ".github/workflows/api-ci.yml"
+
+concurrency:
+  group: api-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  api:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: wd
+          POSTGRES_USER: wd
+          POSTGRES_PASSWORD: wd
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd="pg_isready -U wd -d wd"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+
+    env:
+      SPRING_PROFILES_ACTIVE: ci
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/wd
+      SPRING_DATASOURCE_USERNAME: wd
+      SPRING_DATASOURCE_PASSWORD: wd
+
+    defaults:
+      run:
+        working-directory: wd-api
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Java 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+          cache: gradle
+
+      - name: Grant execute permission for Gradle wrapper
+        run: chmod +x ./gradlew
+
+      - name: Build + tests
+        run: ./gradlew clean test
