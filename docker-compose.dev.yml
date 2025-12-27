@@ -1,0 +1,34 @@
+services:
+  postgres:
+    image: postgres:17.4
+    environment:
+      POSTGRES_DB: wd
+      POSTGRES_PASSWORD: secret
+      POSTGRES_USER: wd
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: ./wd-api
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/wd
+      SPRING_DATASOURCE_USERNAME: wd
+      SPRING_DATASOURCE_PASSWORD: secret
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+
+  ui:
+    build:
+      context: ./wd-ui
+    depends_on:
+      - api
+    ports:
+      - "4200:80"
+
+volumes:
+  postgres-data:

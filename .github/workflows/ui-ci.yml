@@ -1,0 +1,51 @@
+name: ui-ci
+
+on:
+  pull_request:
+    paths:
+      - "wd-ui/**"
+      - ".github/workflows/ui-ci.yml"
+  push:
+    branches: [ "main" ]
+    paths:
+      - "wd-ui/**"
+      - ".github/workflows/ui-ci.yml"
+
+concurrency:
+  group: ui-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  ui:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: wd-ui
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node + npm cache
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: wd-ui/.nvmrc
+          cache: npm
+          cache-dependency-path: wd-ui/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint --if-present
+
+      - name: Unit tests
+        env:
+          CI: "true"
+        run: npm test --if-present -- --watch=false
+
+      - name: Build
+        run: npm run build --if-present

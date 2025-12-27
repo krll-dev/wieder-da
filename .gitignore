@@ -1,0 +1,25 @@
+###############################################################################
+# OS / Editor junk
+###############################################################################
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+###############################################################################
+# IntelliJ IDEA
+###############################################################################
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+# IntelliJ with Gradle
+.gradle/
+# IntelliJ misc
+.ideaModules/
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
