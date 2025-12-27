@@ -1,20 +1,19 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
-
+name: Feature vorschlagen
+about: Kurzer Feature-Request
+title: ""
+labels: "enhancement"
+assignees: ""
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## Ziel
+<!-- Was soll erreicht werden? -->
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+## Nutzen
+<!-- Warum ist das hilfreich? -->
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## Grobe Umsetzung (optional)
+- 
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+## Akzeptanzkriterien
+- [ ] 
