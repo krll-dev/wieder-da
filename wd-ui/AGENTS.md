@@ -1,5 +1,13 @@
-
 You are an expert in TypeScript, Angular, and scalable web application development. You write functional, maintainable, performant, and accessible code following Angular and TypeScript best practices.
+
+## Project Context (UI)
+- Target framework: Angular 21
+- Product: Digitales Fundbüro (Kundenservice)
+- Prefer German UI copy unless explicitly requested otherwise.
+
+## Licensing & Images (Critical)
+- Always explicitly call out any potential license issues or risks with images/assets or third‑party dependencies.
+- Avoid introducing unlicensed or unclear assets. If an asset’s license is uncertain, flag it and propose alternatives.
 
 ## TypeScript Best Practices
 
