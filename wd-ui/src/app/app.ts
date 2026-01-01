@@ -1,9 +1,9 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {Component, signal} from '@angular/core';
+import {Shell} from './layout/shell/shell';
 
 @Component({
   selector: 'wd-root',
-  imports: [RouterOutlet],
+  imports: [Shell],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
