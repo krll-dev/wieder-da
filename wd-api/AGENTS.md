@@ -17,6 +17,3 @@ Scope: `wd-api/` and all subdirectories.
 ## API & Security
 - Be explicit about authorization boundaries and roles.
 - Return clear, consistent error responses.
-
-## Licensing & Images (Critical)
-- Always explicitly call out any potential license issues or risks with images/assets or third‑party dependencies.
