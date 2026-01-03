@@ -5,10 +5,6 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Product: Digitales Fundbüro (Kundenservice)
 - Prefer German UI copy unless explicitly requested otherwise.
 
-## Licensing & Images (Critical)
-- Always explicitly call out any potential license issues or risks with images/assets or third‑party dependencies.
-- Avoid introducing unlicensed or unclear assets. If an asset’s license is uncertain, flag it and propose alternatives.
-
 ## TypeScript Best Practices
 
 - Use strict type checking
