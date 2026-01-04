@@ -1,1 +1,110 @@
-<p>hilfe works!</p>
+<section aria-labelledby="hilfe-title" class="hilfe-page">
+  <mat-card class="hilfe-card">
+    <mat-card-header>
+      <mat-card-title id="hilfe-title">Hilfe &amp; Unterstützung</mat-card-title>
+      <mat-card-subtitle>Digitales Fundbüro – Kundenservice</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Hier finden Sie Antworten auf die wichtigsten Fragen rund um Fundstücke, Verlustmeldungen und die
+        Abholung. Nutzen Sie die Schnellzugriffe oder sehen Sie sich die Schritt-für-Schritt-Anleitung an.
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="hilfe-actions">
+      <button color="primary" mat-flat-button routerLink="/status">Status prüfen</button>
+      <button color="primary" mat-stroked-button routerLink="/kontakt">Kontakt aufnehmen</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="hilfe-card">
+    <mat-card-header>
+      <mat-card-title>So funktioniert’s</mat-card-title>
+      <mat-card-subtitle>In vier Schritten zum passenden Ergebnis</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <mat-icon aria-hidden="true" matListItemIcon>search</mat-icon>
+          <div matListItemTitle>Fundstück suchen</div>
+          <div matListItemLine>Durchstöbern Sie die aktuellen Fundstücke nach Kategorie oder Ort.</div>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-icon aria-hidden="true" matListItemIcon>report</mat-icon>
+          <div matListItemTitle>Verlust melden</div>
+          <div matListItemLine>Erfassen Sie Details wie Datum, Ort und Beschreibung.</div>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-icon aria-hidden="true" matListItemIcon>check_circle</mat-icon>
+          <div matListItemTitle>Status verfolgen</div>
+          <div matListItemLine>Verfolgen Sie den Fortschritt Ihrer Meldung in Echtzeit.</div>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-icon aria-hidden="true" matListItemIcon>event</mat-icon>
+          <div matListItemTitle>Abholung planen</div>
+          <div matListItemLine>Vereinbaren Sie einen Termin und bringen Sie einen Ausweis mit.</div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="hilfe-card">
+    <mat-card-header>
+      <mat-card-title>Häufige Fragen</mat-card-title>
+      <mat-card-subtitle>Antworten auf die wichtigsten Punkte</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Wie lange werden Fundstücke aufbewahrt?</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>Fundstücke werden in der Regel 6 Monate aufbewahrt. Danach erfolgt die weitere Verwertung.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Welche Angaben brauche ich für eine Verlustmeldung?</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+            Bitte geben Sie den Zeitraum, den Fundort, eine Beschreibung sowie besondere Merkmale (z. B.
+            Farbe, Marke, Seriennummer) an.
+          </p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>Wie kann ich ein Fundstück abholen?</mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>
+            Nach erfolgreicher Zuordnung erhalten Sie eine Benachrichtigung. Vereinbaren Sie einen Termin und
+            bringen Sie einen gültigen Ausweis mit.
+          </p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="hilfe-card">
+    <mat-card-header>
+      <mat-card-title>Kontakt &amp; Servicezeiten</mat-card-title>
+      <mat-card-subtitle>Wir helfen Ihnen gerne weiter</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-list role="list">
+        <mat-list-item role="listitem">
+          <mat-icon aria-hidden="true" matListItemIcon>call</mat-icon>
+          <div matListItemTitle>Telefon</div>
+          <div matListItemLine>+49 30 1234 5678</div>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-icon aria-hidden="true" matListItemIcon>mail</mat-icon>
+          <div matListItemTitle>E-Mail</div>
+          <div matListItemLine>kundenservice&#64;digitales-fundbuero.de</div>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+          <mat-icon aria-hidden="true" matListItemIcon>schedule</mat-icon>
+          <div matListItemTitle>Servicezeiten</div>
+          <div matListItemLine>Mo–Fr 08:00–18:00, Sa 09:00–13:00</div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</section>
