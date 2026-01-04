@@ -1,0 +1,103 @@
+.kontakt {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem clamp(1.5rem, 3vw, 3rem) 3rem;
+}
+
+.kontakt__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 52rem;
+}
+
+.kontakt__eyebrow {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--mat-sys-on-surface-variant);
+  margin: 0;
+}
+
+.kontakt__grid,
+.kontakt__channels {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+mat-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-content {
+  display: grid;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.kontakt__card-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "icon title"
+    "subtitle subtitle";
+  column-gap: 0.5rem;
+  row-gap: 0.25rem;
+  align-items: center;
+}
+
+.kontakt__card-icon {
+  grid-area: icon;
+  font-size: 1.125rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+}
+
+.kontakt__card-title {
+  grid-area: title;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.kontakt__card-subtitle {
+  grid-area: subtitle;
+  margin: 0;
+}
+
+mat-card-actions {
+  margin-top: auto;
+  padding-inline: 1rem 1rem;
+  padding-bottom: 1rem;
+  justify-content: flex-start;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.kontakt__hint {
+  margin: 0;
+  color: var(--mat-sys-on-surface-variant);
+  font-size: 0.95rem;
+}
+
+.kontakt__divider {
+  margin: 0.5rem 0;
+}
+
+.kontakt__additional {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kontakt__additional h2 {
+  margin: 0;
+}
