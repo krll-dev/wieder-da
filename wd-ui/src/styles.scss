@@ -44,3 +44,10 @@ body {
 .main-content {
   padding: 16px;
 }
+
+.content-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2rem clamp(1.5rem, 3vw, 3rem) 3rem;
+}
