@@ -1,1 +1,129 @@
-<p>kontakt works!</p>
+<section class="content-page">
+  <header>
+    <h1>Kontakt</h1>
+    <p>
+      Wir helfen Ihnen bei Fragen zu Fundstücken, Verlustmeldungen und dem Status Ihrer Anliegen.
+      Wählen Sie den passenden Kontaktweg oder nutzen Sie unser Servicezentrum vor Ort.
+    </p>
+  </header>
+
+  <div class="kontakt__grid" aria-label="Kontaktmöglichkeiten">
+    <mat-card>
+      <mat-card-header class="kontakt__card-header">
+        <mat-icon class="kontakt__card-icon" aria-hidden="true">support_agent</mat-icon>
+        <mat-card-title class="kontakt__card-title">Service-Hotline</mat-card-title>
+        <mat-card-subtitle class="kontakt__card-subtitle">
+          Montag bis Freitag, 08:00–18:00 Uhr
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Unsere Hotline unterstützt Sie bei der Suche nach Fundstücken, der Erstellung von
+          Verlustmeldungen und allgemeinen Fragen zum digitalen Fundbüro.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a
+          mat-stroked-button
+          href="tel:+493012345670"
+          aria-label="Service-Hotline anrufen"
+        >
+          Jetzt anrufen
+        </a>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header class="kontakt__card-header">
+        <mat-icon class="kontakt__card-icon" aria-hidden="true">mail</mat-icon>
+        <mat-card-title class="kontakt__card-title">E-Mail-Service</mat-card-title>
+        <mat-card-subtitle class="kontakt__card-subtitle">
+          Antwort in der Regel innerhalb von 24 Stunden
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Schicken Sie uns Ihre Anliegen mit Aktenzeichen oder einer kurzen Beschreibung. Wir
+          kümmern uns schnellstmöglich um Ihr Anliegen.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a
+          mat-stroked-button
+          href="mailto:service@digitales-fundbuero.de"
+          aria-label="E-Mail an den Kundenservice senden"
+        >
+          E-Mail senden
+        </a>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header class="kontakt__card-header">
+        <mat-icon class="kontakt__card-icon" aria-hidden="true">location_on</mat-icon>
+        <mat-card-title class="kontakt__card-title">Servicezentrum</mat-card-title>
+        <mat-card-subtitle class="kontakt__card-subtitle">
+          Besuche nach Terminvereinbarung
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <address>
+          Digitales Fundbüro
+          <br/>
+          Musterstraße 12
+          <br/>
+          10115 Berlin
+        </address>
+        <p class="kontakt__hint">
+          Bitte bringen Sie für Abholungen einen gültigen Ausweis und Ihre Vorgangsnummer mit.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a
+          mat-stroked-button
+          href="https://www.google.com/maps/search/?api=1&query=Musterstra%C3%9Fe%2012%2C%2010115%20Berlin"
+          target="_blank"
+          rel="noopener"
+          aria-label="Route zum Servicezentrum öffnen"
+        >
+          Route öffnen
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <mat-divider class="kontakt__divider"></mat-divider>
+
+  <section class="kontakt__additional" aria-labelledby="kontakt-weitere-wege">
+    <h2 id="kontakt-weitere-wege">Weitere Kontaktwege</h2>
+    <div class="kontakt__channels">
+      <mat-card>
+        <mat-card-header class="kontakt__card-header">
+          <mat-icon class="kontakt__card-icon" aria-hidden="true">chat</mat-icon>
+          <mat-card-title class="kontakt__card-title">Live-Chat</mat-card-title>
+          <mat-card-subtitle class="kontakt__card-subtitle">
+            Mo–Fr 09:00–16:00 Uhr
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Nutzen Sie den Live-Chat im Dashboard, wenn Sie eine schnelle Rückfrage haben.</p>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card>
+        <mat-card-header class="kontakt__card-header">
+          <mat-icon class="kontakt__card-icon" aria-hidden="true">schedule</mat-icon>
+          <mat-card-title class="kontakt__card-title">Rückrufservice</mat-card-title>
+          <mat-card-subtitle class="kontakt__card-subtitle">
+            Termin flexibel wählbar
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            Teilen Sie uns Ihre Wunschzeit mit. Wir melden uns innerhalb eines Werktags bei Ihnen.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+</section>
