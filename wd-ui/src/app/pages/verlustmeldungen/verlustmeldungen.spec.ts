@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { Verlustmeldungen } from './verlustmeldungen';
+import {Verlustmeldungen} from './verlustmeldungen';
 
 describe('Verlustmeldungen', () => {
   let component: Verlustmeldungen;

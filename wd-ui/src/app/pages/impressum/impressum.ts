@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from '@angular/material/card';
-import {MatDivider, MatList, MatListItem} from '@angular/material/list';
+import {MatList, MatListItem} from '@angular/material/list';
 
 @Component({
   selector: 'wd-impressum',
@@ -9,7 +9,6 @@ import {MatDivider, MatList, MatListItem} from '@angular/material/list';
     MatCardHeader,
     MatCardTitle,
     MatCardContent,
-    MatDivider,
     MatList,
     MatListItem
   ],

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { Datenschutz } from './datenschutz';
+import {Datenschutz} from './datenschutz';
 
 describe('Datenschutz', () => {
   let component: Datenschutz;

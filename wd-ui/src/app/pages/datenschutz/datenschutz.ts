@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
-import {MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle,} from '@angular/material/card';
-import {MatDivider} from '@angular/material/divider';
+import {MatCard, MatCardContent, MatCardHeader, MatCardTitle,} from '@angular/material/card';
 import {MatList, MatListItem} from '@angular/material/list';
 
 @Component({
@@ -9,9 +8,7 @@ import {MatList, MatListItem} from '@angular/material/list';
     MatCard,
     MatCardContent,
     MatCardHeader,
-    MatCardSubtitle,
     MatCardTitle,
-    MatDivider,
     MatList,
     MatListItem,
   ],
