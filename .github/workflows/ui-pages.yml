@@ -1,0 +1,63 @@
+name: ui-pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "wd-ui/**"
+      - ".github/workflows/ui-pages.yml"
+  pull_request:
+    paths:
+      - "wd-ui/**"
+      - ".github/workflows/ui-pages.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: ui-pages-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: wd-ui
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node + npm cache
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: wd-ui/.nvmrc
+          cache: npm
+          cache-dependency-path: wd-ui/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure Pages paths
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "BASE_HREF=/${{ github.event.repository.name }}/pr-${{ github.event.pull_request.number }}/Software/" >> "$GITHUB_ENV"
+            echo "DEST_DIR=pr-${{ github.event.pull_request.number }}/Software" >> "$GITHUB_ENV"
+          else
+            echo "BASE_HREF=/${{ github.event.repository.name }}/" >> "$GITHUB_ENV"
+            echo "DEST_DIR=." >> "$GITHUB_ENV"
+          fi
+
+      - name: Build for GitHub Pages
+        run: npm run build -- --base-href "${BASE_HREF}"
+
+      - name: Deploy to GitHub Pages
+        if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: wd-ui/dist/wd-ui
+          destination_dir: ${{ env.DEST_DIR }}
+          keep_files: true
