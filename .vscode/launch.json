@@ -1,0 +1,25 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "TestWdApiApplication",
+      "request": "launch",
+      "mainClass": "de.krll.wdapi.TestWdApiApplication",
+      "projectName": "wd-api",
+      "cwd": "${workspaceFolder}/wd-api"
+    },
+    {
+      "type": "java",
+      "name": "WdApiApplication",
+      "request": "launch",
+      "mainClass": "de.krll.wdapi.WdApiApplication",
+      "projectName": "wd-api",
+      "cwd": "${workspaceFolder}/wd-api",
+      "args": "--spring.profiles.active=local"
+    }
+  ]
+}
