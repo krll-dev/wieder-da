@@ -1,4 +1,4 @@
-FROM eclipse-temurin:25-jdk-jammy AS build
+FROM eclipse-temurin:21-jdk-jammy AS build
 LABEL author="KRLL | dev"
 WORKDIR /workspace
 
@@ -11,7 +11,7 @@ RUN ./gradlew --no-daemon dependencies
 COPY src src
 RUN ./gradlew --no-daemon bootJar
 
-FROM eclipse-temurin:25-jre-jammy
+FROM eclipse-temurin:21-jre-jammy
 WORKDIR /app
 COPY --from=build /workspace/build/libs/*.jar app.jar
 EXPOSE 8080

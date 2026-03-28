@@ -29,4 +29,4 @@ docker compose -f docker-compose.dev.yml up
 ## Allgemeine Richtlinien
 
 - Kleine, fokussierte Änderungen bevorzugen
-- Konfiguration an den Zielversionen ausrichten: Angular 21, Spring Boot 4.0.1, PostgreSQL 17.4, JDK 25
+- Konfiguration an den Zielversionen ausrichten: Angular 21, Spring Boot 4.0.1, PostgreSQL 17.4, JDK 21
