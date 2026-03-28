@@ -20,51 +20,11 @@ Monorepo mit zwei unabhängig deployenden Services:
 
 Docker Compose orchestriert alle drei Services. Die API nutzt Flyway für Datenbankmigrationen.
 
-## Entwicklungsbefehle
+## Vollständigen Stack lokal starten
 
-### Vollständigen Stack lokal starten
 ```bash
 docker compose -f docker-compose.dev.yml up
 ```
-
-### Frontend (wd-ui)
-```bash
-cd wd-ui
-npm start          # Dev-Server auf localhost:4200
-npm test           # Tests mit Vitest ausführen
-npm run lint       # ESLint
-npm run lint:fix   # Lint-Fehler automatisch beheben
-npm run build      # Produktions-Build
-```
-
-### Backend (wd-api)
-```bash
-cd wd-api
-./gradlew build          # Kompilieren und paketieren
-./gradlew clean test     # Tests ausführen (PostgreSQL erforderlich)
-```
-
-Das `local` Spring-Profil aktiviert die Docker-Compose-Integration (startet PostgreSQL automatisch). Im CI wird das `ci`-Profil mit einem externen PostgreSQL-Service verwendet.
-
-## Frontend-Konventionen (wd-ui)
-
-- **Nur Standalone Components** — keine NgModules
-- **Signal-basierter State** — `signal()` / `computed()` / `effect()` bevorzugen statt Subject-Patterns
-- **Lazy-Loading für Routen** — alle Feature-Routen müssen `loadComponent` verwenden
-- **OnPush Change Detection** bei allen Components
-- **Native Control Flow** — `@if`, `@for`, `@switch` verwenden (nicht `*ngIf`, `*ngFor`)
-- **Reactive Forms** — keine Template-driven Forms
-- **Kein `@HostBinding` / `@HostListener`** — stattdessen `host: {}` in `@Component`-Metadaten
-- **`NgOptimizedImage`** für alle statischen Bilder
-- **Barrierefreiheit** — WCAG AA Konformität; Validierung mit AXE-Checks
-
-## Backend-Konventionen (wd-api)
-
-- **Constructor Injection** — keine Field Injection (`@Autowired` auf Feldern)
-- **Eingabevalidierung am Controller-Rand** — Bean Validation Annotations verwenden
-- **Immutable DTOs** — Java Records für Request-/Response-Objekte
-- **Schichttrennung** — Business-Logik in Services, Persistenz in Repositories; JPA Entities dürfen nicht an API-Grenzen nach außen dringen
-- **Explizite Autorisierung** — auf Controller- oder Service-Ebene durchsetzen
 
 ## Allgemeine Richtlinien
 
