@@ -11,6 +11,12 @@ Diese Datei enthält Hinweise für Claude Code (claude.ai/code) zur Arbeit im Ba
 
 Das `local` Spring-Profil aktiviert die Docker-Compose-Integration (startet PostgreSQL automatisch). Im CI wird das `ci`-Profil mit einem externen PostgreSQL-Service verwendet.
 
+## Stack
+
+- Spring Boot 4.0.1, JDK 21, Gradle
+- PostgreSQL 17.4 mit Flyway-Migrationen
+- Lombok für Boilerplate-Reduktion (Getter, Setter, Builder etc.)
+
 ## Konventionen
 
 - **Constructor Injection** — keine Field Injection (`@Autowired` auf Feldern)
